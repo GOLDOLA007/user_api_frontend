@@ -6,12 +6,59 @@
         <link rel="stylesheet" href="style.css">
         <script src="main.js"></script>
     </head>
-    <body>
-        <h1>Welcome to USER_API test</h1>
-        <p>This is a simple web application for tests.</p>
+    <body onload="testAPI()">
+        <diV class="API-Header">
+            <h1>Welcome to USER_API test</h1>
+            <p>This is a simple web application for tests.</p>
+            <a href="http://localhost:8080/swagger-ui/index.html#/" style="color: black; font-size: 18px;" target="_blank">Swagger docs</a>
+        </diV>
         
-        <h3>API Response:</h3>
-        <span id="response"></span>
+        <div class="API-TESTOptions">
+            <div class="API-Response">
+                <h2>API Response:</h2>
+                STATUS:<span id="response"></span>
+                <span id="counter"></span>
+            </div>
 
+            <div class="endpoint post">
+                <div class="endpoint-header">
+
+                    <span class="method">POST</span>
+
+                    <span class="route">/register</span>
+
+                </div>
+
+                <div class="endpoint-body">
+
+                    <input type="text" placeholder="Username">
+
+                    <input type="password" placeholder="Password">
+
+                    <button>Execute</button>
+
+                </div>
+            </div>
+
+            <div class="endpoint post">
+                <div class="endpoint-header">
+
+                    <span class="method">POST</span>
+
+                    <span class="route">/login</span>
+
+                </div>
+
+                <div class="endpoint-body">
+
+                    <input type="text" placeholder="Username">
+
+                    <input type="password" placeholder="Password">
+
+                    <button>Execute</button>
+
+                </div>
+            </div>
+        </div>
     </body>
 </html>

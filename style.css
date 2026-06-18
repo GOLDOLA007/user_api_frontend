@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    margin: 0;
+    padding: 30px;
+}
+
+.API-Header {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.API-TESTOptions,
+.API-Response {
+
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+.API-TESTOptions h2,
+.API-Response h2{
+    margin: 0;
+}
+
+input,
+select,
+textarea{
+
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid #bbb;
+    border-radius: 4px;
+
+    font-size: 15px;
+}
+
+button{
+
+    padding: 12px 18px;
+
+    background: #49cc90;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+button:hover{
+    background: #39b67d;
+}
+
+.API-Response pre{
+
+    background: #272822;
+    color: #f8f8f2;
+
+    padding: 15px;
+    border-radius: 5px;
+
+    overflow-x: auto;
+}
+
+.endpoint{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:20px auto;
+
+    border:1px solid #ccc;
+    border-radius:6px;
+
+    overflow:hidden;
+}
+
+.endpoint-header{
+
+    display:flex;
+    align-items:center;
+
+    gap:20px;
+
+    padding:15px;
+
+    background:#e8f5e9;
+}
+
+.method{
+
+    background:#49cc90;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:4px;
+
+    font-weight:bold;
+
+    min-width:70px;
+
+    text-align:center;
+}
+
+.route{
+
+    font-family:monospace;
+    font-size:18px;
+}
+
+.endpoint-body{
+
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+}
