@@ -28,9 +28,9 @@
             </div>
 
             <div class="endpoint post">
-                <div class="endpoint-header">
+                <div class="endpoint-post-header">
 
-                    <span class="method">POST</span>
+                    <span class="method-post">POST</span>
 
                     <span class="route">/register</span>
 
@@ -38,21 +38,26 @@
 
                 <div class="endpoint-body">
 
-                    <input type="text" id="Username_R" placeholder="Name">
+                    <form onsubmit="event.preventDefault(); registerAPI();">
+                        <input type="text" required id="Username_R" placeholder="Name">
 
-                    <input type="email" id="Email_R"placeholder="Email">
+                        <input type="email" required id="Email_R"placeholder="Email">
 
-                    <input type="password" id="Password_R"placeholder="Password">
+                        <input type="password" required minlength="6" id="Password_R"placeholder="Password">
 
-                    <button onclick="registerAPI()">Execute</button>
+                        <button>Execute</button>
+
+                        <span id="register-response" class="Request-Response">Request Response: </span>
+                    </form>
+                    
 
                 </div>
             </div>
 
             <div class="endpoint post">
-                <div class="endpoint-header">
+                <div class="endpoint-post-header">
 
-                    <span class="method">POST</span>
+                    <span class="method-post">POST</span>
 
                     <span class="route">/login</span>
 
@@ -60,11 +65,17 @@
 
                 <div class="endpoint-body">
 
-                    <input type="email" id="Username_L" placeholder="Email">
+                    <form onsubmit="event.preventDefault(); loginAPI();">
+                        <input type="email" id="Username_L" required placeholder="Email">
 
-                    <input type="password" id="Password_L" placeholder="Password">
+                        <input type="password" id="Password_L" required placeholder="Password">
 
-                    <button>Execute</button>
+                        <button>Execute</button>
+
+                        <span id="login-response" class="Request-Response">Request Response: </span>
+                    </form>
+
+                    
 
                 </div>
             </div>
