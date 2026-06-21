@@ -1,4 +1,9 @@
 async function registerAPI(){
+
+    if(!(document.getElementById("register-response").textContent === "Request Response: ")){
+        document.getElementById("register-response").textContent = "Request Response: ";
+    }
+
     await fetch("http://localhost:8080/auth/register", {
         method: "POST",
         headers: {
