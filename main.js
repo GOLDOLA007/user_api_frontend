@@ -25,8 +25,7 @@ let i =0;
 async function testAPI() {
     await fetch("http://localhost:8080/auth/status")
     .then(response => response.text())
-        .then(text => document.getElementById('response').textContent = text)
-        .then(text => document.getElementById('counter').textContent = 'API called (1min intervals): ' + i + ' times')
-        .catch(error => document.getElementById('response').textContent = 'Error: ' + error);    
+        .then(text => document.getElementById('response').textContent =  text + " | "+ 'API called: ' + i + ' times')    
+    .catch(error => document.getElementById('response').textContent = 'Error: ' + error);    
         i=i+1;
 }
