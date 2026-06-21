@@ -21,8 +21,7 @@ body {
     font-weight: bold;
 }
 
-.API-TESTOptions,
-.API-Response {
+.API-TESTOptions{
 
     width: 90%;
     max-width: 1100px;
@@ -43,8 +42,7 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,.08);
 }
 
-.API-TESTOptions h2,
-.API-Response h2{
+.API-TESTOptions h2{
     margin: 0;
 }
 
