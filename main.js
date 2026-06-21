@@ -1,15 +1,15 @@
 async function registerAPI(){
-    await fetch("http://localhost:8080/auth/register"), {
+    await fetch("http://localhost:8080/auth/register", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json "
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             name: document.getElementById('Username_R').value,
             email: document.getElementById('Email_R').value,
             password: document.getElementById('Password_R').value
         })
-    }
+    })
     .then(response => console.log('Response: ' + response))
     .catch(error => console.log('Error: ' + error))
 }
