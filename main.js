@@ -58,11 +58,10 @@ async function testAPI() {
 
         const data = await response.text();
 
-        document.getElementById('response').textContent = data + " | API called: " + i + " times";
+        document.getElementById('response').textContent = "Request Response: " + data;
         console.log("API Status: " + response.status);
     }
     catch(error){
         console.log("Error: " + error);
     }  
-    i=i+1;
 }
