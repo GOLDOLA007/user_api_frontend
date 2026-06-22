@@ -43,9 +43,21 @@ async function loginAPI_Response(){
 setInterval(testAPI, 60000); // Call testAPI every 1min
 let i =0;
 async function testAPI() {
-    await fetch("http://localhost:8080/auth/status")
-    .then(response => response.text())
-        .then(text => document.getElementById('response').textContent =  text + " | "+ 'API called: ' + i + ' times')    
-    .catch(error => document.getElementById('response').textContent = 'Error: ' + error);    
-        i=i+1;
+    try{
+        const response = await fetch("http://localhost:8080/auth/status")
+        
+        if(!response.ok){
+            throw new Error(`Server responded with status: ${response.status}`)
+            document.getElementById('response').textContent = response.status;
+        }
+
+        const data = await response.text();
+
+        document.getElementById('response').textContent = data + " | API called: " + i + " times";
+        console.log("API Status: " + response.status);
+    }
+    catch(error){
+        console.log("Error: " + error);
+    }  
+    i=i+1;
 }
