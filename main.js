@@ -71,7 +71,7 @@ async function loginAPI(){
 
         if(token != ""){
             window.localStorage.setItem("token", token);
-            window.location.href = "https://console.neon.tech/app/projects/cool-bar-26791645?database=neondb"
+            window.location.href = "loginPage.html";
         }
     }
     catch(error){
