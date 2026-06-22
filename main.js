@@ -71,7 +71,7 @@ async function loginAPI(){
 
         if(token != ""){
             window.localStorage.setItem("token", token);
-            window.location.href = "loginPage.html";
+            window.location.href = "secretPage.html";
         }
     }
     catch(error){
